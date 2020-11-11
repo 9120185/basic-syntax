@@ -25,3 +25,17 @@ console.log(map.has('family'))//be sure that everything is erased
 
 // #6 - Size : return the current element count
 console.log(map.size) //output => 2 > family and born-in ( if I comment clear method, is shown 2 )
+
+//Another way to initialize
+// #1 :
+var anotherMap = new Map([
+    ['name', 'Kiarash'],
+    ['family', 'Rezahanjani'],
+    ['born-in', 'Tehran']
+
+])
+// #2 :
+var anotherMapTwo = new Map()
+anotherMap.set('name', 'Souri')
+          .set('family', 'Sayar')
+          .set('born-in', 'Tehran')
