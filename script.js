@@ -16,5 +16,21 @@ class student {
 }
 // Initialize
 var myStudent = new student ("Kaveh","Rezaei",29,"Tehran")
+
 //Call the class method
 myStudent.showDetails()
+
+//Class Inheritance
+class studentGrade extends student {
+    constructor(name,family,age,bornIn,grade) {
+        super(name,family,age,bornIn);
+        this.grade = grade
+    }
+    showGrade() {
+        return this.showDetails() + console.log("Your grade is :" + " " + this.grade)
+
+    }
+
+}
+var newStudent = new studentGrade ("Kaveh","Rezaei",29,"Tehran","A+")
+newStudent.showGrade()
